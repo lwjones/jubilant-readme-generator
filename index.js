@@ -1,12 +1,15 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
+
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const askQuestions = () => {
   return inquirer.prompt([
     {
       type: 'input',
-      name: 'name',
+      name: 'title',
       message: 'What is the name of the project?',
       validate: nameInput => {
         if (nameInput) {
@@ -20,7 +23,7 @@ const askQuestions = () => {
     {
       type: 'input',
       name: 'url',
-      message: 'What is the link to the repository?',
+      message: 'What is the link to the project\'s website?',
       validate: url => {
         if (url) {
           return true;
@@ -51,7 +54,7 @@ const askQuestions = () => {
     {
       type: 'input',
       name: 'usage',
-      message: 'How would someone use the project? (leave blank to skip)'
+      message: 'Provide some examples and instructions off its use. (leave blank to skip)'
     },
     {
       type: 'input',
@@ -99,7 +102,21 @@ const askQuestions = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = (fileName, data) => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(`./dist/${fileName}`, data, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve({
+        ok: true,
+        message: 'File created. Find it at this app\'s directory in the \`dist\` folder'
+      })
+    });
+  });
+};
 
 // TODO: Create a function to initialize app
 function init() {
@@ -108,7 +125,8 @@ function init() {
   )
   askQuestions()
     .then(readmeData => {
-      console.table(readmeData);
+      console.log(readmeData);
+      return writeToFile("README.md", generateMarkdown(readmeData));
     });
 }
 
