@@ -7,12 +7,12 @@ const askQuestions = () => {
     {
       type: 'input',
       name: 'name',
-      message: 'What is the name of your project',
+      message: 'What is the name of the project?',
       validate: nameInput => {
         if (nameInput) {
           return true;
         } else {
-          console.log('Please enter the name of your project');
+          console.log('This field is required');
           return false;
         }
       }
@@ -25,7 +25,7 @@ const askQuestions = () => {
         if (url) {
           return true;
         } else {
-          console.log('Please enter the name of your project');
+          console.log('Repo URL is required');
           return false;
         }
       }
@@ -33,7 +33,7 @@ const askQuestions = () => {
     {
       type: 'input',
       name: 'description',
-      message: 'Describe your project.',
+      message: 'Describe the project.',
       validate: description => {
         if (description) {
           return true;
@@ -46,28 +46,31 @@ const askQuestions = () => {
     {
       type: 'input',
       name: 'installation',
-      message: 'Explain the installation process.'
+      message: 'Explain the installation process. (leave blank to skip)'
     },
     {
       type: 'input',
       name: 'usage',
-      message: ''
+      message: 'How would someone use the project? (leave blank to skip)'
     },
     {
       type: 'input',
       name: 'contributing',
-      message: 'How can someone contribute to your project?'
+      message: 'How can someone contribute to your project? (leave blank to skip)'
     },
     {
       type: 'input',
       name: 'testing',
-      message: 'How can someone perform testing on your project?'
+      message: 'How can someone perform testing on your project? (leave blank to skip)'
     },
     {
       type: 'list',
       name: 'licensing',
       message: 'What license would you like to apply?',
       choices: [
+        new inquirer.Separator(),
+        'None',
+        new inquirer.Separator(),
         'Apache 2.0 license',
         'Boost Software License 1.0',
         'BSD 3-Clause License',
