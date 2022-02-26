@@ -2,6 +2,14 @@
 
 > A command-line app to quickly and easily generate a README file
 
+## Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Working with the generated file](#working-with-the-produced-file)
+- [Software used](#software-used)
+
 ## Description
 
 READMEs are a little difficult. They have a lot of parts that one may tend to omit. This makes it easy as you would just type in which parts you need to include.
@@ -84,8 +92,12 @@ If someone has any questions, they can reach out to you here about the project.
 
 After entering all the information, the README file is written to the `dist` folder of this project's directory. The file will be formatted in Markdown.
 
-## Software Used
+## Software used
 
 ### [Inquirer](https://github.com/SBoudrias/Inquirer.js/)
 
 Inquirer is used to create an interactive command line interface.
+
+## License
+
+This application is licensed via [Unlicense](https://unlicense.org).
