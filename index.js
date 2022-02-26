@@ -128,8 +128,13 @@ function init() {
   )
   askQuestions()
     .then(readmeData => {
-      console.log(readmeData);
       return writeToFile("README.md", generateMarkdown(readmeData));
+    })
+    .then(writeFileResponse => {
+      console.log(writeFileResponse.message);
+    })
+    .catch(err => {
+      console.log(err);
     });
 }
 

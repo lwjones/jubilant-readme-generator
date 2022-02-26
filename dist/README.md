@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [Description](#description)
-
+- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Testing](#testing)
@@ -16,7 +16,8 @@
 
 How do you make a sandwich? Well he have to stack everything together and see what is best
 
-
+## Installation
+Install using `npm i`
 
 ## Usage
 Start of with the new keyword. Just simply state new Sandwich() and you can start applying your protien and toppings
