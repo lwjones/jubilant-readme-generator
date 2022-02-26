@@ -22,19 +22,6 @@ const askQuestions = () => {
     },
     {
       type: 'input',
-      name: 'url',
-      message: 'What is the link to the project\'s website?',
-      validate: url => {
-        if (url) {
-          return true;
-        } else {
-          console.log('Repo URL is required');
-          return false;
-        }
-      }
-    },
-    {
-      type: 'input',
       name: 'description',
       message: 'Describe the project.',
       validate: description => {

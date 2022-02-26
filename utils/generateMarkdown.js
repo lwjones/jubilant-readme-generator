@@ -95,13 +95,13 @@ ${renderLicenseBadge(data.licensing)}
 
 ## Table of Contents
 
-1. [Description](#description)
-${data.installation ? '2. [Installation](#installation)' : ''}
-${data.usage ? '3. [Usage](#usage)' : ''}
-${data.contributing ? '4. [Contributing](#contributing)' : ''}
-${data.testing ? '5. [Testing](#testing)' : ''}
-6. [Questions](#questions)
-7. [License](#license)
+- [Description](#description)
+${data.installation ? '- [Installation](#installation)' : ''}
+${data.usage ? '- [Usage](#usage)' : ''}
+${data.contributing ? '- [Contributing](#contributing)' : ''}
+${data.testing ? '- [Testing](#testing)' : ''}
+- [Questions](#questions)
+- [License](#license)
 
 ## Description
 
