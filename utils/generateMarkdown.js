@@ -93,6 +93,16 @@ function generateMarkdown(data) {
 
 ${renderLicenseBadge(data.licensing)}
 
+## Table of Contents
+
+1. [Description](#description)
+${data.installation ? '2. [Installation](#installation)' : ''}
+${data.usage ? '3. [Usage](#usage)' : ''}
+${data.contributing ? '4. [Contributing](#contributing)' : ''}
+${data.testing ? '5. [Testing](#testing)' : ''}
+6. [Questions](#questions)
+7. [License](#license)
+
 ## Description
 
 ${data.description}
@@ -103,11 +113,11 @@ ${data.usage ? '## Usage\n' + data.usage : ''}
 
 ${data.contributing ? '## Contributing\n' + data.contributing : ''}
 
-${data.tests ? '## Tests\n' + data.tests : ''}
+${data.testing ? '## Testing\n' + data.testing : ''}
 
 ## Questions
 
-If you would like to connect, find me at ${data.username} or reach out to me at ${data.email}
+If you would like to connect, find me at ${data.username} or reach out to me at ${data.email}.
 
 ${renderLicenseSection(data.licensing)}
 `;

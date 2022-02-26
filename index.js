@@ -91,12 +91,28 @@ const askQuestions = () => {
       type: 'input',
       name: 'username',
       message:
-        'What is the project owner\'s Github if someone has a question?'
+        'What is the project owner\'s Github URL if someone has a question?',
+      validate: username => {
+        if (username) {
+          return true;
+        } else {
+          console.log('Please provide the user\'s Github URL');
+          return false;
+        }
+      }
     },
     {
       type: 'input',
       name: 'email',
-      message: 'What email can someone reach out to with questions?'
+      message: 'What email can someone reach out to with questions?',
+      validate: email => {
+        if (email) {
+          return true;
+        } else {
+          console.log('Please provide a contact email');
+          return false;
+        }
+      }
     }
   ]);
 };
