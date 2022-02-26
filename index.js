@@ -34,22 +34,22 @@ const askQuestions = () => {
       }
     },
     {
-      type: 'input',
+      type: 'editor',
       name: 'installation',
       message: 'Explain the installation process. (leave blank to skip)'
     },
     {
-      type: 'input',
+      type: 'editor',
       name: 'usage',
       message: 'Provide some examples and instructions off its use. (leave blank to skip)'
     },
     {
-      type: 'input',
+      type: 'editor',
       name: 'contributing',
       message: 'How can someone contribute to your project? (leave blank to skip)'
     },
     {
-      type: 'input',
+      type: 'editor',
       name: 'testing',
       message: 'How can someone perform testing on your project? (leave blank to skip)'
     },
