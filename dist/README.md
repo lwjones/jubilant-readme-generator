@@ -6,9 +6,7 @@
 
 - [Description](#description)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
-
 - [Questions](#questions)
 - [License](#license)
 
@@ -17,13 +15,15 @@
 Ever try to think about what you could put on a sandwich? Well we have a couple of toppings and protiens to choose from. From ham to tofu, lettuce to bbq sauce, you can put whatever you want into your sandwich!
 
 ## Installation
+
 Install using
 
 ```shell
 npm i
-````
+```
 
 ## Usage
+
 Start with the `new` keyword after importing `Sandwich` into your project.
 
 ```js
@@ -50,11 +50,9 @@ const sandwich = include("Sandwich");
 const italian = new Sandwich();
 ```
 
-
 ## Contributing
+
 Want to contribute to this project? Feel free to open an issue or pull request. View our Contributing guidelines.
-
-
 
 ## Questions
 
